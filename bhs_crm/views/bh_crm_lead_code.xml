@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record id="base.action_partner_form" model="ir.actions.act_window">
+        <field name="domain">[('employee', '=', False),('customer_rank','>', 0)]</field>
+        <field name="context">{'res_partner_search_mode': 'customer','search_default_type_company':True,'default_is_company':True}</field>
+    </record>
+
+<!--    LEAD-->
+    <record id="view_crm_lead_form_inherit" model="ir.ui.view">
+			<field name="name">res.crm.lead.form.inherit</field>
+			<field name="model">crm.lead</field>
+			<field name="inherit_id" ref="crm.crm_lead_view_form"/>
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='partner_id']" position="before">
+					<field name="lead_code" readonly="1" force_save="1"/>
+				</xpath>
+			</field>
+    </record>
+
+    <record id="view_crm_lead_tree_inherit" model="ir.ui.view">
+        <field name="name">res.crm.lead.tree.inherit</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_case_tree_view_leads"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="before">
+                <field name="lead_code" readonly="1" force_save="1"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_crm_lead_kanban_inherit" model="ir.ui.view">
+            <field name="name">res.crm.lead.kanban.inherit</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.view_crm_lead_kanban"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div/div" position="before">
+                    <div><field name="lead_code" readonly="1" force_save="1"/></div>
+                </xpath>
+            </field>
+    </record>
+
+
+    <!--    PIPELINE-->
+    <record id="view_pipeline_kanban_inherit" model="ir.ui.view">
+            <field name="name">res.pipeline.kanban.inherit</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_case_kanban_view_leads"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div/div" position="before">
+                    <div><field name="lead_code" readonly="1" force_save="1"/></div>
+                </xpath>
+            </field>
+    </record>
+
+    <record id="view_pipeline_tree_inherit" model="ir.ui.view">
+            <field name="name">res.pipeline.tree.inherit</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_case_tree_view_oppor"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="before">
+                    <field name="lead_code" readonly="1" force_save="1"/>
+                </xpath>
+            </field>
+    </record>
+
+    <record id="view_pipeline_form_inherit" model="ir.ui.view">
+			<field name="name">res.pipeline.form.inherit</field>
+			<field name="model">crm.lead</field>
+			<field name="inherit_id" ref="crm.crm_lead_view_form"/>
+			<field name="arch" type="xml">
+				<xpath expr="//div[hasclass('oe_title')]//h1" position="after">
+                      <div class="d-flex fw-bold">
+                            <div class="col-1">Lead code:</div>
+                            <field name="lead_code" readonly="1" force_save="1"/>
+                      </div>
+				</xpath>
+			</field>
+    </record>
+</odoo>
