@@ -11,7 +11,7 @@
   <h3 align="center">CRM Lead Code</h3>
 
   <p align="center">
-    A product of Bac Ha Software allows to distinguish between customer lists and internal accounts.
+    A product of Bac Ha Software allows automatically generate customer codes and classify customers and internal contacts
   </p>
 </div>
 
@@ -86,7 +86,7 @@ Install module  <code>bhs_crm</code>
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Module allows to distinguish between customer lists and internal accounts.
+Module allows automatically generate customer codes and classify customers and internal contacts
 #### Featured Highlight:
 
 🌟 <code>Simple Setup</code>: Features are automatically added after you install module, with no additional configuration required.

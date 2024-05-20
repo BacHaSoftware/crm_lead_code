@@ -7,10 +7,10 @@
     'category': 'Sales/CRM',
     'sequence': 340,
     'summary': """
-        Module allows to distinguish between customer lists and internal accounts.
+        Module allows automatically generate customer codes and classify customers and internal contacts.
     """,
     'description': """
-        A product of Bac Ha Software allows to distinguish between customer lists and internal accounts.
+        A product of Bac Ha Software allows automatically generate customer codes and classify customers and internal contacts.
     """,
     'website': 'https://bachasoftware.com/',
     'depends': ['hr', 'crm', 'account'],
