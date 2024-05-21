@@ -6,6 +6,7 @@
     'version': '1.0',
     'category': 'Sales/CRM',
     'sequence': 340,
+    'author': 'Bac Ha Software',
     'summary': """
         Module allows automatically generate customer codes and classify customers and internal contacts.
     """,
