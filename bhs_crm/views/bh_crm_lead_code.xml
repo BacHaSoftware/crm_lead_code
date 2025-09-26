@@ -34,8 +34,8 @@
             <field name="model">crm.lead</field>
             <field name="inherit_id" ref="crm.view_crm_lead_kanban"/>
             <field name="arch" type="xml">
-                <xpath expr="//div/div" position="before">
-                    <div><field name="lead_code" readonly="1" force_save="1"/></div>
+                <xpath expr="//field[@name='name']" position="before">
+                    <field name="lead_code" readonly="1" force_save="1"/>
                 </xpath>
             </field>
     </record>
@@ -47,8 +47,8 @@
             <field name="model">crm.lead</field>
             <field name="inherit_id" ref="crm.crm_case_kanban_view_leads"/>
             <field name="arch" type="xml">
-                <xpath expr="//div/div" position="before">
-                    <div><field name="lead_code" readonly="1" force_save="1"/></div>
+                <xpath expr="//field[@name='name']" position="before">
+                    <field name="lead_code" readonly="1" force_save="1"/>
                 </xpath>
             </field>
     </record>
