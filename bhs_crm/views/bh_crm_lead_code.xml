@@ -35,7 +35,7 @@
             <field name="inherit_id" ref="crm.view_crm_lead_kanban"/>
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='name']" position="before">
-                    <field name="lead_code" readonly="1" force_save="1"/>
+                    <div><field name="lead_code" readonly="1" force_save="1"/></div>
                 </xpath>
             </field>
     </record>
@@ -48,7 +48,7 @@
             <field name="inherit_id" ref="crm.crm_case_kanban_view_leads"/>
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='name']" position="before">
-                    <field name="lead_code" readonly="1" force_save="1"/>
+                    <div><field name="lead_code" readonly="1" force_save="1"/></div>
                 </xpath>
             </field>
     </record>
@@ -69,12 +69,12 @@
 			<field name="model">crm.lead</field>
 			<field name="inherit_id" ref="crm.crm_lead_view_form"/>
 			<field name="arch" type="xml">
-				<xpath expr="//div[hasclass('oe_title')]//h1" position="after">
-                      <div class="d-flex fw-bold">
-                            <div class="col-1">Lead code:</div>
-                            <field name="lead_code" readonly="1" force_save="1"/>
-                      </div>
-				</xpath>
+				<xpath expr="//div[hasclass('oe_title')]//h2" position="before">
+                    <div class="fw-bold text-muted mb-1 d-flex align-items-center gap-2 w-100 flex-nowrap text-nowrap">
+                        <span>Lead code: </span>
+                        <field class="mb-0" name="lead_code" readonly="1" force_save="1"/>
+                    </div>
+                </xpath>
 			</field>
     </record>
 </odoo>
