@@ -3,7 +3,7 @@
 
 {
     'name': 'CRM Lead Code',
-    'version': '1.0',
+    'version': '19.0.1.0',
     'category': 'Sales/CRM',
     'sequence': 340,
     'author': 'Bac Ha Software',
