@@ -2,7 +2,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 {
-    'name': 'CRM Lead Code',
+    'name': 'Lead Code Generator',
     'version': '19.0.1.0',
     'category': 'Sales/CRM',
     'sequence': 340,
