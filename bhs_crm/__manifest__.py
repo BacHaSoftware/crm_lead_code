@@ -19,7 +19,7 @@
         'data/ir_sequence_data.xml',
         'views/bh_crm_lead_code.xml'
     ],
-    'images': ['static/description/info_banner.png'],
+    'images': ['static/description/banner.png'],
     'installable': True,
     'auto_install': False,
     'application': True,
