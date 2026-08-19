@@ -8,7 +8,7 @@
     <img src="/bhs_crm/static/description/icon.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">CRM Lead Code</h3>
+  <h3 align="center">Lead Code Generator</h3>
 
   <p align="center">
     A product of Bac Ha Software allows automatically generate customer codes and classify customers and internal contacts
